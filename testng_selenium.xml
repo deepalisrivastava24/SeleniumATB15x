@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Hp/IdeaProjects/SeleniumATB15x">
+        <classes>
+            <class name="org.learning.selenium005_Assertion_Testng">
+                <methods>
+                    <include name="test_selenium_01"/>
+                    <include name="test_selenium_02"/>
+                    <include name="test_selenium_03"/>
+                </methods>
+            </class>
+            <class name="org.learning.selenium006_Assertion_Testing02">
+                <methods>
+                    <include name="test_selenium_01"/>
+                    <include name="test_selenium_02"/>
+                    <include name="test_selenium_03"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
