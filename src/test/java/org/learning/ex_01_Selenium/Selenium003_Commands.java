@@ -1,4 +1,4 @@
-package org.learning;
+package org.learning.ex_01_Selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

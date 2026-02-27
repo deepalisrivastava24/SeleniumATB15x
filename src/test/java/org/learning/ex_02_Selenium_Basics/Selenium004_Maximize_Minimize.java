@@ -1,8 +1,7 @@
-package org.learning;
+package org.learning.ex_02_Selenium_Basics;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Selenium004_Maximize_Minimize {
     public static void main(String[] args) {

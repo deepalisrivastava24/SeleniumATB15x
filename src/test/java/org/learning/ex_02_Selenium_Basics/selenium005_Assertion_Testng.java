@@ -1,19 +1,17 @@
-package org.learning;
+package org.learning.ex_02_Selenium_Basics;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.*;
 
-import static org.assertj.core.api.Assertions.assertThat;
 
-public class selenium006_Assertion_Testing02 {
+public class selenium005_Assertion_Testng {
 
     @Test
     public void test_selenium_01(){
-
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://katalon-demo-cura.herokuapp.com/");
 
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/");
@@ -24,7 +22,7 @@ public class selenium006_Assertion_Testing02 {
 
     @Test
     public void test_selenium_02(){
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://katalon-demo-cura.herokuapp.com/");
 
         //Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/");
@@ -36,7 +34,7 @@ public class selenium006_Assertion_Testing02 {
 
     @Test
     public void test_selenium_03(){
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://katalon-demo-cura.herokuapp.com/");
 
 
@@ -52,5 +50,4 @@ public class selenium006_Assertion_Testing02 {
 
 
     }
-
 }
