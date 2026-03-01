@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1" verbose="1">
+    <test name="Katalon Assertion Check">
+        <classes>
+            <class name="org.learning.Selenium_Katalon_Project.Selenium_Katalon_Project">
+                <methods>
+                    <include name="Test_Selenium_Katalon_Project"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
