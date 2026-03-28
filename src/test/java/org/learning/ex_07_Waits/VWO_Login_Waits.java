@@ -36,7 +36,7 @@ public class VWO_Login_Waits {
 
         WebElement error = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".notification-box-description")));
 
-        String Error_Text=error.getText();
+        String Error_Text = error.getText();
 
         String expectedText = "Your email, password, IP address or location did not match";
 
