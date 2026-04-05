@@ -1,5 +1,6 @@
 package org.learning.ex_07_Waits;
 
+import org.learning.CommonToAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class VWO_Login_Waits {
+public class VWO_Login_Waits extends CommonToAll {
 
     @Test
     public void TestSelenium() throws InterruptedException {
@@ -42,7 +43,7 @@ public class VWO_Login_Waits {
 
         Assert.assertEquals(Error_Text,expectedText);
 
-        driver.quit();
+        //driver.quit();
 
     }
 }

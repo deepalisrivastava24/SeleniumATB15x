@@ -1,4 +1,4 @@
-package org.learning.ex_07_Waits;
+package org.learning.Input_Select_Alerts;
 
 import io.qameta.allure.Description;
 import org.learning.WaitHelpers.WaitHelpers;
@@ -31,16 +31,16 @@ public class InputFeildsProject {
         WebElement inputLastName = driver.findElement(By.xpath("//input[@name=\"lastname\"]"));
         inputLastName.sendKeys("Srivastava");
 
-        WaitHelpers.waitForVisibility(driver,5,"//label[@class=\"radio\"]");
-        WebElement radioBtn = driver.findElement(By.xpath("//label[@class=\"radio\"]"));
+        WaitHelpers.waitForVisibility(driver,5,"//input[@id=\"sex-1\"]");
+        WebElement radioBtn = driver.findElement(By.xpath("//input[@id=\"sex-1\"]"));
         radioBtn.click();
 
         if (radioBtn.isSelected()) {
             System.out.println("Radio button is selected");
         }
 
-        WaitHelpers.waitForVisibility(driver,5,"//label[@class=\"radio\"]");
-        WebElement checkBox = driver.findElement(By.xpath("//label[@class=\"radio\"]"));
+        WaitHelpers.waitForVisibility(driver,5,"//input[@id=\"profession-1\"]");
+        WebElement checkBox = driver.findElement(By.xpath("//input[@id=\"profession-1\"]"));
         checkBox.click();
 
         if (checkBox.isSelected()) {

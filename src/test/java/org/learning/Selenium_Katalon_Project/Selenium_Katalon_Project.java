@@ -39,7 +39,5 @@ public class Selenium_Katalon_Project {
 
 
 
-
-
     }
 }

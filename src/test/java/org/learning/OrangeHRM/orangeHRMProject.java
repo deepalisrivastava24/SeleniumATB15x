@@ -68,6 +68,7 @@ public class orangeHRMProject {
                 break;
             }
         }
-        //driver.quit();
+        driver.quit();
+
     }
 }
