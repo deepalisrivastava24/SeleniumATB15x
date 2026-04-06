@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 public class WaitHelper {
+
     public static void waitJVM(int time){
         try {
             Thread.sleep(time);
