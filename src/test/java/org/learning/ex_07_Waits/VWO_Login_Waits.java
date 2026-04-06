@@ -43,7 +43,7 @@ public class VWO_Login_Waits extends CommonToAll {
 
         Assert.assertEquals(Error_Text,expectedText);
 
-        //driver.quit();
+        driver.quit();
 
     }
 }

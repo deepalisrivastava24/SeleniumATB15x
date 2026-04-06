@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -14,7 +15,7 @@ public class Selenium_Katalon_Project {
 
     @Test
     public void Test_Selenium_Katalon_Project(){
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://katalon-demo-cura.herokuapp.com/");
         driver.manage().window().maximize();
 
