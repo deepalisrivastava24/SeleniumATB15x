@@ -47,6 +47,8 @@ public class InputFeildsProject {
             System.out.println("Checkbox is selected");
         }
 
+        WaitHelper.waitJVM(1000);
+
         driver.quit();
 
     }
