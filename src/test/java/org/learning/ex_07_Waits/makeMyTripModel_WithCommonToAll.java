@@ -16,7 +16,7 @@ public class makeMyTripModel_WithCommonToAll extends CommonToAll {
 
         driver = new ChromeDriver();
         OpenBrowser(driver, "https://www.makemytrip.com/");
-        waitForVisibility(driver,3,"//span[@data-cy=\"closeModal\"]");
+        //waitForVisibility(driver,3,"//span[@data-cy=\"closeModal\"]");
         WaitHelper.checkVisibility(driver, By.xpath("//span[@data-cy=\"closeModal\"]"),3);
         clickFoundElement("//span[@data-cy=\"closeModal\"]");
         WaitHelper.waitJVM(10000);
