@@ -20,6 +20,7 @@ public class CommonToAll {
     public void closeBrowser(WebDriver driver){
         driver.quit();
     }
+
     public void waitForVisibility(WebDriver driver, int timeInSeconds,String xpath){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));

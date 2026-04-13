@@ -45,4 +45,11 @@ public class WaitHelper {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Xpath)));
     }
+
+    public static void waitForVisibilityAndClick(WebDriver driver, int timeInSeconds, String Xpath){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Xpath)));
+        WebElement element = driver.findElement(By.xpath(Xpath));
+        element.click();
+    }
 }

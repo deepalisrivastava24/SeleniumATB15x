@@ -1,4 +1,4 @@
-package org.learning.Input_Select_Alerts;
+package org.learning.ex_11_Input_Select_Alerts;
 
 import io.qameta.allure.Description;
 import org.learning.CommonToAll;
