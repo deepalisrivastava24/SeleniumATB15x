@@ -52,4 +52,11 @@ public class WaitHelper {
         WebElement element = driver.findElement(By.xpath(Xpath));
         element.click();
     }
+
+    public static void waitForElementToBeClickable(WebDriver driver, int timeInSeconds, String Xpath){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Xpath)));
+        WebElement element = driver.findElement(By.xpath(Xpath));
+        element.click();
+    }
 }

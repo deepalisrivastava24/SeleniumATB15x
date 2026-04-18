@@ -4,8 +4,6 @@ import io.qameta.allure.Description;
 import org.learning.CommonToAll;
 import org.learning.WaitHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -17,7 +15,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.Set;
 
-public class Selenium_VWO_Project extends CommonToAll {
+public class Selenium_VWO_SignUP extends CommonToAll {
 
     @Description("Verify full flow of VWO")
     @Test
@@ -61,7 +59,7 @@ public class Selenium_VWO_Project extends CommonToAll {
 
         //actions.moveToElement(txt_BusinessEmail).build().perform();
         txt_BusinessEmail.clear();
-        txt_BusinessEmail.sendKeys("Teep02@abc.com");
+        txt_BusinessEmail.sendKeys("vqfgln3034@tempmail.rest");
 
 
         WebElement checkbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
@@ -79,14 +77,14 @@ public class Selenium_VWO_Project extends CommonToAll {
 
         //***********SIGN UP PAGE ***********//
         WebElement txt_FirstName = driver.findElement(By.xpath("//input[@data-qa='page-su-v1-fname']"));
-        txt_FirstName.sendKeys("Teepu");
+        txt_FirstName.sendKeys("pyhgh");
 
         WebElement txt_LastName = driver.findElement(By.xpath("//input[@data-qa='page-su-v1-lname']"));
-        txt_LastName.sendKeys("xyz");
+        txt_LastName.sendKeys("pyjuh");
 
         WebElement txt_PhoneNo = driver.findElement(By.xpath("//input[@data-qa='page-su-v1-pnumber']"));
         txt_PhoneNo.clear();
-        txt_PhoneNo.sendKeys("9600164955");
+        txt_PhoneNo.sendKeys("9989164950");
 
         WaitHelper.checkVisibility(driver,By.xpath("//button[contains(text(),'Create Account')]"),5);
         WebElement btn_CreateAccount = driver.findElement(By.xpath("//button[contains(text(),'Create Account')]"));
@@ -98,18 +96,25 @@ public class Selenium_VWO_Project extends CommonToAll {
         btn_CreateAccount.click();
 
         //***********CLICK ON SKIP BUTTON ***********//
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-step='free-trial-thankyou']"))).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement btn_skip = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-step=\"free-trial-thankyou\"]")));
+        btn_skip.click();
+
+
+        WebElement btn_Continue =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Continue Setup')]")));
+        btn_Continue.click();
+
+        WaitHelper.waitForVisibilityAndClick(driver,10,"(//div[@data-qa='sologixico'])[2]");
 
 
 
         //***********SET-UP YOUR ACCOUNT PAGE ***********//
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-qa='boxasuraza']"))).click();
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-qa='boxasuraza']"))).click();
 
         //***********CLICK ON START A FREE TRAIL ***********//
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@data-qa='cunoxonoxe'])[2]"))).click();
+        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@data-qa='cunoxonoxe'])[2]"))).click();
 
 //        WaitHelper.waitForVisibilityAndClick(driver,5000,"(//button[@data-qa='cunoxonoxe'])[2]");
 
@@ -117,6 +122,8 @@ public class Selenium_VWO_Project extends CommonToAll {
 //        WaitHelper.waitJVM(5000);
 //        actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 //        WaitHelper.waitForVisibilityAndClick(driver, 5000,"//button[contains(text(),'Add domain')]");
+          //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Add domain')]"))).click();
+
 
     }
 }
